@@ -1,0 +1,335 @@
+:root {
+  --primary-color: #ec4899;         /* Vibrant rose/pink accent */
+  --primary-hover: #db2777;         /* Deeper pink for hover */
+  --bg-color: #fff1f2;              /* Soft blush canvas */
+  --card-bg: #ffffff;               /* Crisp card background */
+  --text-main: #4c0519;             /* High-contrast deep berry */
+  --text-muted: #9d174d;            /* Muted rose for metadata */
+  --border-color: #fce7f3;          /* Soft border tone */
+  --border-accent: #f472b6;         /* Highlighted border */
+  --danger-color: #f43f5e;          /* Rose danger red */
+  --danger-hover: #e11d48;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Nav Bar */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.05);
+}
+
+.nav-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Containers and Cards */
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(236, 72, 153, 0.04);
+}
+
+.post-card {
+  border-top: 4px solid var(--primary-color);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.container-small {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.feed-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Posts and Comments Typography */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-header h2 {
+  font-size: 1.25rem;
+  color: #831843;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.badge-edited {
+  font-size: 0.75rem;
+  color: #d97706;
+  font-style: italic;
+  margin-left: 0.35rem;
+}
+
+.post-content {
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 1.25rem 0;
+}
+
+/* Comments Section */
+.comments-section h4 {
+  color: #831843;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.comment-box {
+  background: #fff5f7;
+  border: 1px solid var(--border-color);
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.comment-actions {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-link,
+.delete-link-btn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+
+.edit-link {
+  color: var(--primary-color);
+}
+.edit-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.delete-link-btn {
+  color: var(--danger-color);
+}
+.delete-link-btn:hover {
+  color: var(--danger-hover);
+  text-decoration: underline;
+}
+
+.comment-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-accent);
+  border-radius: 4px;
+  outline: none;
+}
+.comment-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.2);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+  vertical-align: middle;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  height: 28px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  border-color: var(--border-accent);
+  color: var(--text-muted);
+}
+.btn-secondary:hover {
+  background-color: #fff1f2;
+  color: #831843;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: #ffffff;
+}
+.btn-danger:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Container to ensure horizontal button groups align evenly */
+.post-action-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.post-action-group form {
+  margin: 0;
+  display: inline-flex;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #831843;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--border-accent);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(236, 72, 153, 0.2);
+}
+
+.alert {
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+.alert-danger {
+  background-color: #ffe4e6;
+  color: #9f1239;
+  border: 1px solid #fda4af;
+}
+.alert-success {
+  background-color: #fdf2f8;
+  color: #9d174d;
+  border: 1px solid #fbcfe8;
+}
+
+.switch-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.switch-link a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+.switch-link a:hover {
+  text-decoration: underline;
+}
